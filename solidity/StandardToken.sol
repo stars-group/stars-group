@@ -17,7 +17,8 @@ contract StandardToken is Token {
         uint8 _decimals,
         string _name,
         string _symbol
-    ) public {
+    ) public
+    {
         balances[msg.sender] = _supply;
         totalSupply = _supply;
         decimals = _decimals;
