@@ -4,11 +4,14 @@ defmodule Stars.Command.Auth do
 
 	def handle_command({"auth.register", body, _version}, _from, state) do
 		%{
-			"email" => username,
+			"name" => name,
+			"email" => email,
 			"password" => password,
 		} = body
-		{:ok, key} = User.create(email, password)
-		{:reply, key, state)}
+		case User.create(name, email, password) do
+			{:error, error} -> {:error, error, state}
+			{:ok, key} -> {:reply, key, state}
+		end
 	end
 
 	def handle_command({"auth.login", body, _version}, _from, state) do
@@ -20,9 +23,10 @@ defmodule Stars.Command.Auth do
 			{:ok, user} <- User.from_email(email),
 			:ok <- User.check_password(user, password)
 		do
-			User.unlock(customer, user)
-			token = User.login(customer, user)
+			token = User.login(user)
 			{:reply, token, state}
+		else
+			{:error, error} -> {:error, error, state}
 		end
 	end
 

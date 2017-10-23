@@ -9,8 +9,7 @@ defmodule Stars.Application do
     Stars.Config.load(Fig.Loader.Env)
     # List all child processes to be supervised
     children = [
-      # Starts a worker by calling: Stars.Worker.start_link(arg)
-      # {Stars.Worker, arg},
+      Kora.Server.child_spec()
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

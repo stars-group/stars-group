@@ -1,27 +1,32 @@
 import * as React from 'react'
-import { Route, BrowserRouter } from 'react-router-dom'
+import { Store } from './kora'
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom'
 
 import Root from './root'
 
 import HomePage from './pages/home-page'
+import AuthPage from './pages/auth-page'
 
 export default () => {
 	return (
 		<BrowserRouter>
 			<Root>
-				<Route path='/' component={HomePage} />
+				<Switch>
+					<Route exact path='/auth/:type' component={AuthPage} />
+				</Switch>
 			</Root>
 		</BrowserRouter>
 	)
 }
 
-
-export class RouteHack extends React.Component<any, any> {
-	render() {
-		return (
-			<BrowserRouter>
-				{this.props.routes()}
-			</BrowserRouter>
-		)
-	}
-}
+const PrivateRoute = ({ component: Component, ...rest }) => (
+	<Route {...rest} render={props => (
+	  Store.get(['user', 'key']) ? (
+		<Component {...props}/>
+	  ) : (
+		<Redirect to={{
+		  pathname: '/login',
+		}}/>
+	  )
+	)}/>
+  )

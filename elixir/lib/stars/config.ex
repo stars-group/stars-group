@@ -10,7 +10,9 @@ defmodule Stars.Config do
 			Stars.User.Create,
 			Stars.User.Email,
 		],
-		commands: [],
+		commands: [
+			Stars.Command.Auth,
+		],
 		read: nil,
 		writes: nil,
 	}

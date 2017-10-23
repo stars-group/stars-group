@@ -14,7 +14,7 @@ defmodule Stars.User do
 		Kora.query_path!(["token:user", token])
 	end
 
-	def create(email, password) do
+	def create(name, email, password) do
 		key = UUID.ascending()
 		["user:info", key]
 		|> Mutation.merge(%{
