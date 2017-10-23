@@ -7,7 +7,7 @@
   "dynamic_ex": {:git, "https://github.com/ironbay/dynamic_ex.git", "5d6afdac3d31371b062c3b4f4286ad53de9a9948", []},
   "eleveldb": {:hex, :eleveldb, "2.2.20", "1fff63a5055bbf4bf821f797ef76065882b193f5e8095f95fcd9287187773b58", [], [], "hexpm"},
   "exleveldb": {:hex, :exleveldb, "0.11.1", "37c0414208a50d2419d8246305e6c4a33ed339c25c0bdfa27774795e1e089f7b", [], [{:eleveldb, "~> 2.2.19", [hex: :eleveldb, repo: "hexpm", optional: false]}], "hexpm"},
-  "fig": {:git, "https://github.com/ironbay/fig.git", "8faedac770786092f775f7d134d428ff39f1636f", []},
+  "fig": {:git, "https://github.com/ironbay/fig.git", "ffe8250a2e94f5ab0669e20bb4fe8ff987b67624", []},
   "gen_state_machine": {:hex, :gen_state_machine, "2.0.1", "85efd5a0376929c3a4246dd943e17564a2908c7ddd7acd242d84594e785d83f8", [], [], "hexpm"},
   "kora": {:git, "https://github.com/ironbay/kora.git", "6b3dc56caee499d89f09bfdeb029f789f9884ced", []},
   "libcluster": {:hex, :libcluster, "2.2.3", "fdd7366532799b1a4d4a4cdd113c6d51a593783879a43f862ccfae92423f843f", [], [{:poison, "~> 3.0", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm"},
