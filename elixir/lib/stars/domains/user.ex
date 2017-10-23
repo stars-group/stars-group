@@ -3,6 +3,17 @@ defmodule Stars.User do
 	alias Kora.UUID
 	alias Kora.Mutation
 
+	def from_email(email) do
+		case Kora.query_path!(["email:user", email]) do
+			nil -> {:error, :unknown_user}
+			result -> {:ok, result}
+		end
+	end
+
+	def from_token(token) do
+		Kora.query_path!(["token:user", token])
+	end
+
 	def create(email, password) do
 		key = UUID.ascending()
 		["user:info", key]
@@ -18,13 +29,6 @@ defmodule Stars.User do
 		end
 	end
 
-	def from_email(email) do
-		case Kora.query_path!(["email:user", email]) do
-			nil -> {:error, :unknown_user}
-			result -> {:ok, result}
-		end
-	end
-
 	def set_password(user, password) do
 		hash = Bcrypt.hashpwsalt(password)
 		["user:data", user, "password"]
@@ -37,6 +41,16 @@ defmodule Stars.User do
 			hash ->
 				password
 				|> Bcrypt.checkpw(hash)
+				|> case do
+					true -> :ok
+					false -> {:error, :bad_password}
+				end
 		end
+	end
+
+	def login(user) do
+		token = UUID.ascending()
+		Kora.merge(["token:user", token], user)
+		token
 	end
 end
