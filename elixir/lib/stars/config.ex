@@ -6,7 +6,10 @@ defmodule Stars.Config do
 	}
 
 	config :kora, %{
-		interceptors: [],
+		interceptors: [
+			Stars.User.Create,
+			Stars.User.Email,
+		],
 		commands: [],
 		read: nil,
 		writes: nil,

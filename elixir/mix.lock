@@ -1,4 +1,5 @@
 %{
+  "comeonin": {:hex, :comeonin, "3.2.0", "cb10995a22aed6812667efb3856f548818c85d85394d8132bc116fbd6995c1ef", [], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [], [], "hexpm"},
   "cowboy": {:git, "https://github.com/ninenines/cowboy.git", "d8cdd9bd15e76dca3014f6f76c0ab6666b1dbda3", [ref: "2.0.0-pre.7"]},
   "cowlib": {:git, "https://github.com/ninenines/cowlib.git", "bd37be4d3b065600c3b76b492535e76e5d413fc1", [ref: "master"]},
@@ -6,6 +7,7 @@
   "decimal": {:hex, :decimal, "1.4.1", "ad9e501edf7322f122f7fc151cce7c2a0c9ada96f2b0155b8a09a795c2029770", [], [], "hexpm"},
   "dynamic_ex": {:git, "https://github.com/ironbay/dynamic_ex.git", "5d6afdac3d31371b062c3b4f4286ad53de9a9948", []},
   "eleveldb": {:hex, :eleveldb, "2.2.20", "1fff63a5055bbf4bf821f797ef76065882b193f5e8095f95fcd9287187773b58", [], [], "hexpm"},
+  "elixir_make": {:hex, :elixir_make, "0.4.0", "992f38fabe705bb45821a728f20914c554b276838433349d4f2341f7a687cddf", [], [], "hexpm"},
   "exleveldb": {:hex, :exleveldb, "0.11.1", "37c0414208a50d2419d8246305e6c4a33ed339c25c0bdfa27774795e1e089f7b", [], [{:eleveldb, "~> 2.2.19", [hex: :eleveldb, repo: "hexpm", optional: false]}], "hexpm"},
   "fig": {:git, "https://github.com/ironbay/fig.git", "ffe8250a2e94f5ab0669e20bb4fe8ff987b67624", []},
   "gen_state_machine": {:hex, :gen_state_machine, "2.0.1", "85efd5a0376929c3a4246dd943e17564a2908c7ddd7acd242d84594e785d83f8", [], [], "hexpm"},
