@@ -9,7 +9,7 @@ defmodule Stars.Config do
 		interceptors: [],
 		commands: [],
 		read: nil,
-		write: nil,
+		writes: nil,
 	}
 
 end
