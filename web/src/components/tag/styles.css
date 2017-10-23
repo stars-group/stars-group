@@ -1,0 +1,9 @@
+@import '../../variables/colors';
+
+.tag {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    white-space: nowrap;
+}
