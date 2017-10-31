@@ -2,6 +2,7 @@ defmodule Stars.User do
 	alias Comeonin.Bcrypt
 	alias Kora.UUID
 	alias Kora.Mutation
+	import Dynamic.Macros
 
 	def from_email(email) do
 		case Kora.query_path!(["email:user", email]) do
@@ -53,4 +54,11 @@ defmodule Stars.User do
 		Kora.merge(["token:user", token], user)
 		token
 	end
+
+	# User Info
+	get [
+		:key,
+		:email,
+	]
+
 end
