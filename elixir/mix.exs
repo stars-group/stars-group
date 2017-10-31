@@ -24,7 +24,7 @@ defmodule Stars.MixProject do
     [
       {:kora, github: "ironbay/kora"},
       {:fig, github: "ironbay/fig"},
-      {:dynamic, github: "ironbay/dynamic_ex"},
+      {:dynamic_ex, github: "ironbay/dynamic_ex"},
       {:comeonin, "~> 3.0"},
     ]
   end
