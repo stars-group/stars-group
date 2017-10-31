@@ -26,6 +26,8 @@ defmodule Stars.MixProject do
       {:fig, github: "ironbay/fig"},
       {:dynamic_ex, github: "ironbay/dynamic_ex"},
       {:comeonin, "~> 3.0"},
+
+			{:distillery, "~> 1.4", runtime: false}
     ]
   end
 end
