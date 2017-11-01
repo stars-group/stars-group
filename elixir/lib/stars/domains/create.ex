@@ -1,7 +1,6 @@
 defmodule Stars.User.Create do
 	use Kora.Interceptor
 	alias Kora.Mutation
-	alias Stars.User
 
 	def before_mutation(["user:info", user], %{merge: %{"key" => _}}, _mut, _user) do
 		{
