@@ -13,6 +13,7 @@ export default () => {
 			<Root>
 				<Switch>
 					<Route exact path='/auth/:type' component={AuthPage} />
+					<Route exact path='/' component={HomePage} />
 				</Switch>
 			</Root>
 		</BrowserRouter>
