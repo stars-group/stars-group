@@ -22,11 +22,11 @@ export default () => {
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route {...rest} render={props => (
-	  Store.get(['user', 'key']) ? (
+	  Store.get(['me', 'key']) ? (
 		<Component {...props}/>
 	  ) : (
 		<Redirect to={{
-		  pathname: '/login',
+		  pathname: '/auth/login',
 		}}/>
 	  )
 	)}/>

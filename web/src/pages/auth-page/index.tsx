@@ -115,13 +115,12 @@ export default class AuthPage extends React.Component<any, IState> {
 	}
 	private handle_login = async () => {
 		try {
-			console.log(this.state.auth)
 			const token = await Kora.send("auth.login", this.state.auth)
 			localStorage.setItem('token', token)
 			const result = await Kora.send('auth.upgrade', {
 				token: token,
 			}) as string
-			Store.put(['user', 'key'], result)
+			Store.put(['me', 'key'], result)
 			this.props.history.push('/')
 		} catch (ex) {
 			alert(ex)

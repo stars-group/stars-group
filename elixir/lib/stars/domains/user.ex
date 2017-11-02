@@ -19,6 +19,7 @@ defmodule Stars.User do
 		key = UUID.ascending()
 		["user:info", key]
 		|> Mutation.merge(%{
+			"name" => name,
 			"key" => key,
 			"email" => email
 		})

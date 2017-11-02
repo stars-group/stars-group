@@ -11,11 +11,15 @@ export default class Root extends React.Component<any, any> {
 	}
 	componentDidMount() {
 		Store.onChanged.add(() => {
+			console.log(Store.get([]))
 			this.forceUpdate()
 		})
 		Kora.query_path([])
 	}
 	render() {
+		const user = Store.get<String>(['me', 'key'])
+		if (user === null)
+			return false
 		return (
 			<Container vertical>
 				{

@@ -22,7 +22,14 @@
 }
 
 .container.grid {
-	flex-wrap: wrap;
+	flex-wrap: row wrap;
+	margin: -2rem 0 0rem -2rem;
+}
+
+.container.grid > .container {
+	padding: 2rem 0 0 2rem;
+	flex: 1;
+
 }
 
 .container.vertical { flex-direction: column; }
@@ -35,6 +42,7 @@
 .container.justify-center { justify-content: center; }
 .container.justify-end { justify-content: flex-end; }
 .container.justify-between { justify-content: space-between; }
+.container.justify-around { justify-content: space-around; }
 
 .container.grow { flex-grow: 1; }
 
