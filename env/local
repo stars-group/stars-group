@@ -1,2 +1,0 @@
-export KORA_READ="{Kora.Store.Level, directory: \"kora.db\"}"
-export KORA_WRITES="[{Kora.Store.Level, directory: \"kora.db\"}]"
