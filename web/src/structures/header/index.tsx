@@ -1,5 +1,6 @@
 import './styles.css'
 import * as React from 'react'
+import * as numeral from 'numeraljs'
 import { NavLink } from 'react-router-dom'
 
 import Container from '../../components/container'
@@ -23,6 +24,7 @@ export default class Header extends React.Component<IProps, IState> {
 	render() {
 		const me = Store.get<string>(['me', 'key'])
 		const info = Store.get<User>(['user:info', me]) || {}
+		const balance = Store.get<Number>(['token:balance', info.address])
 
 		return (
 			<Container pad-h8 align-center style={{flex: '0 0 4.5rem'}} bg-white>
@@ -31,7 +33,7 @@ export default class Header extends React.Component<IProps, IState> {
 				{ me &&
 					<Container align-center>
 						<Text size-3-5 uppercase weight-5 mgn-r4>{info.name}</Text>
-						<Text size-3-5 uppercase weight-5 fg-highlight mgn-r4>23.2K STARS</Text>
+						<Text size-3-5 uppercase weight-5 fg-highlight mgn-r4>{numeral(balance).format('0a')} STARS</Text>
 						<Icon src='log-out' />
 					</Container>
 				}

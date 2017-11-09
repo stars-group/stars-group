@@ -13,6 +13,7 @@ interface IState {
 		email?: string,
 		password?: string
 		name?: string
+		address?: string
 	}
 }
 
@@ -49,6 +50,7 @@ export default class AuthPage extends React.Component<any, IState> {
 						<Container border-h border-b mgn-t8 vertical mgn-b5>
 							{
 								type === 'register' &&
+								<span>
 									<Form.Row>
 										<Form.Block>
 											<Form.Label>Name</Form.Label>
@@ -58,6 +60,16 @@ export default class AuthPage extends React.Component<any, IState> {
 												onChange={this.editor.handle('name')} />
 										</Form.Block>
 									</Form.Row>
+									<Form.Row>
+										<Form.Block>
+											<Form.Label>Ethereum Address</Form.Label>
+											<Form.Input
+												value={auth.address || ''}
+												placeholder='Enter Ethereum Address'
+												onChange={this.editor.handle('address')} />
+										</Form.Block>
+									</Form.Row>
+								</span>
 							}
 							<Form.Row>
 								<Form.Block>

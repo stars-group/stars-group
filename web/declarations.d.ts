@@ -7,4 +7,5 @@ interface RequireImport {
 interface User {
     key?: string
     name?: string
+    address?: string
 }

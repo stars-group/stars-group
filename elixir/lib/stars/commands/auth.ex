@@ -7,8 +7,9 @@ defmodule Stars.Command.Auth do
 			"name" => name,
 			"email" => email,
 			"password" => password,
+			"address" => address,
 		} = body
-		case User.create(name, email, password) do
+		case User.create(name, address, email, password) do
 			{:error, error} -> {:error, error, state}
 			{:ok, key} -> {:reply, key, state}
 		end

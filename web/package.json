@@ -15,6 +15,7 @@
     "classnames": "^2.2.5",
     "es6-promise-promise": "^1.0.0",
     "moment": "^2.18.1",
+    "numeraljs": "^1.5.6",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"

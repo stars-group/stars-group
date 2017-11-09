@@ -38,6 +38,12 @@ Store.intercept(['me'], data => {
 	})
 })
 
+Store.intercept(['user:info', '+'], data => {
+	const address = data.merge['address']
+	if (!address) return
+	Kora.query_path(['token:balance', address])
+})
+
 // Store.intercept(['user:info', '+'], (data, path) => {
 // 	const key = path[1]
 // 	if (Store.get(['me', 'key']) === key)
