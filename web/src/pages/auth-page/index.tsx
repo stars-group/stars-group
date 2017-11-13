@@ -32,22 +32,12 @@ export default class AuthPage extends React.Component<any, IState> {
 		const { auth } = this.state
 		const { type } = this.props.match.params
 		return (
-			<Container fill >
-				<Container grow bg-black>
-					<Container grow style={{
-						backgroundImage: `url(http://starsgroup.io/wp-content/uploads/2017/09/intro-image-1900x1069.jpg)`,
-						opacity: 0.5,
-						backgroundSize: 'cover',
-						backgroundPosition: 'center',
-						position: 'relative',
-					}} />
-				</Container>
-				<Container style={{
-					flex: '0 0 35rem',
-				}} pad-8 align-center>
-					<Container vertical grow pad-4>
-						<Text uppercase size-6 weight-5 mgn-b8 >STARS Platform</Text>
-						<Container border-h border-b mgn-t8 vertical mgn-b5>
+			<Container fill vertical justify-center align-center>
+				<Container wrap pad-8 align-center justify-center>
+					<Container vertical grow pad-4 style={{maxWidth: '50rem'}}>
+						<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
+						<Text size-4 line-6>Register for the ICO today blah blah blah</Text>
+						<Container border-h border-b mgn-v5 vertical >
 							{
 								type === 'register' &&
 								<span>
@@ -80,17 +70,6 @@ export default class AuthPage extends React.Component<any, IState> {
 										onChange={this.editor.handle('email')} />
 								</Form.Block>
 							</Form.Row>
-							<Form.Row>
-								<Form.Block>
-									<Form.Label>Password</Form.Label>
-									<Form.Input
-										onKeyPress={e => e.which === 13 && this.handle_login()}
-										value={auth.password || ''}
-										type='password'
-										placeholder='Enter password'
-										onChange={this.editor.handle('password')} />
-								</Form.Block>
-							</Form.Row>
 						</Container>
 						{
 							type === 'login' &&
@@ -105,8 +84,8 @@ export default class AuthPage extends React.Component<any, IState> {
 						{
 							type === 'register' &&
 								<Container justify-end>
-									<Link to='/auth/login'>
-										<Text weight-5 fg-gray cursor >Login</Text>
+									<Link to='/wallet'>
+										<Text weight-5 fg-gray cursor >Already Registered?</Text>
 									</Link>
 									<Container grow />
 									<Text mgn-l3 weight-5 fg-highlight cursor onClick={this.handle_register} >Register</Text>

@@ -6,6 +6,7 @@ import Root from './root'
 
 import HomePage from './pages/home-page'
 import AuthPage from './pages/auth-page'
+import WalletPage from './pages/wallet-page'
 
 export default () => {
 	return (
@@ -13,6 +14,7 @@ export default () => {
 			<Root>
 				<Switch>
 					<Route exact path='/auth/:type' component={AuthPage} />
+					<Route exact path='/wallet' component={WalletPage} />
 					<Route exact path='/' component={HomePage} />
 				</Switch>
 			</Root>
