@@ -23,7 +23,7 @@ export default class Root extends React.Component<any, any> {
 		return (
 			<Container vertical>
 				{
-					React.cloneElement(this.props.children)
+					React.cloneElement(this.props.children as any)
 				}
 			</Container>
 		)
