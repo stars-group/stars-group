@@ -3,15 +3,17 @@ defmodule Stars.Command.Auth do
 	alias Stars.User
 
 	def handle_command({"auth.register", body, _version}, _from, state) do
-		%{
-			"name" => name,
-			"email" => email,
-			"password" => password,
-			"address" => address,
-		} = body
-		case User.create(name, address, email, password) do
+		with %{
+				"name" => name,
+				"email" => email,
+				"address" => address,
+			} <- body,
+			{:ok, key} <- User.create(name, address, email)
+		do
+			{:reply, key, state}
+		else
 			{:error, error} -> {:error, error, state}
-			{:ok, key} -> {:reply, key, state}
+			_ -> {:error, :invalid_input, state}
 		end
 	end
 

@@ -9,6 +9,7 @@ defmodule Stars.Config do
 		interceptors: [
 			Stars.User.Create,
 			Stars.User.Email,
+			Stars.User.Address,
 			Stars.Token.Balance,
 		],
 		commands: [

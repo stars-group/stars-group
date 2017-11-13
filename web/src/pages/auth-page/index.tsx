@@ -99,8 +99,9 @@ export default class AuthPage extends React.Component<any, IState> {
 	private handle_register = async () => {
 		try {
 			await Kora.send('auth.register', this.state.auth)
-			this.handle_login()
+			this.props.history.push('/wallet')
 		} catch (ex) {
+			console.log(ex)
 			alert(ex)
 		}
 	}

@@ -15,7 +15,7 @@ defmodule Stars.User do
 		Kora.query_path!(["token:user", token])
 	end
 
-	def create(name, address, email, password) do
+	def create(name, address, email) do
 		key = UUID.ascending()
 		["user:info", key]
 		|> Mutation.merge(%{
@@ -24,7 +24,6 @@ defmodule Stars.User do
 			"address" => address,
 			"email" => email
 		})
-		|> Mutation.combine(set_password(key, password))
 		|> Kora.mutation
 		|> case do
 			{:ok, _} -> {:ok, key}
