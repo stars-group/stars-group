@@ -13,9 +13,9 @@ export default () => {
 		<BrowserRouter>
 			<Root>
 				<Switch>
+					<Redirect exact path='/' to='/auth/register' />
 					<Route exact path='/auth/:type' component={AuthPage} />
 					<Route exact path='/wallet' component={WalletPage} />
-					<Route exact path='/' component={HomePage} />
 				</Switch>
 			</Root>
 		</BrowserRouter>
