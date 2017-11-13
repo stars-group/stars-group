@@ -1,4 +1,7 @@
-FROM elixir:1.5
+FROM elixir:1.5.2-alpine
+
+RUN apk add --no-cache git
+RUN apk add --no-cache alpine-sdk
 
 RUN yes | mix local.hex
 RUN yes | mix local.rebar
@@ -18,7 +21,6 @@ ADD . .
 RUN cp -a /tmp/deps .
 RUN cp -a /tmp/_build .
 RUN ls -lah
-RUN mix deps.get
 RUN mix release
 
 EXPOSE 12000
