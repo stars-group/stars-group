@@ -3,6 +3,7 @@ import * as moment from 'moment'
 
 import wrap from '../wrap'
 import Container from '../container'
+import Grid from '../grid'
 import Text from '../text'
 import Tag from '../tag'
 import Icon from '../icon'
@@ -33,9 +34,7 @@ export default class Date extends React.Component<IProps, any> {
 		const { value, onChange, disabled, ...rest } = this.props
 		const ts = moment(value)
 		return (
-			<Container
-				vertical
-				relative>
+			<Container vertical>
 				<Container>
 					<Form.Input
 						error={this.state.value}
@@ -61,20 +60,20 @@ export default class Date extends React.Component<IProps, any> {
 				style={{
 					zIndex: '1000',
 					position: 'absolute',
-					top: '40px',
-					width: '30rem',
-					left: '-16px',
+					width: '25rem',
+					right: '-1px',
+					top: '100%',
 				}}
 				vertical
-				border-v
+				border
 				bg-lightgray
 			>
 				<Container>
 					<Arrow flip={false} onClick={() => this.handle_date(start.clone().add(-1, 'month'))} />
-					<Text center grow pad-v6 weight-5>{start.format('MMMM')}</Text>
+					<Text center grow pad-v6 weight-5>{start.format('MMMM YYYY')}</Text>
 					<Arrow flip={true} onClick={() => this.handle_date(start.clone().add(1, 'month'))} />
 				</Container>
-				<Container grid>
+				<Grid columns={7}>
 					{
 						days.map((item, n) => {
 							const disabled = item.month() !== ts.month()
@@ -82,7 +81,7 @@ export default class Date extends React.Component<IProps, any> {
 							return (
 								<Container
 									key={n}
-									pad-v4
+									pad-v3
 									align-center
 									justify-center
 									vertical
@@ -93,9 +92,6 @@ export default class Date extends React.Component<IProps, any> {
 											return
 										this.handle_date(item, true)
 										this.handle_focus(false)
-									}}
-									style={{
-										width: 'calc(100%/7)'
 									}}
 								>
 									<Text
@@ -116,7 +112,7 @@ export default class Date extends React.Component<IProps, any> {
 							)
 						})
 					}
-				</Container>
+				</Grid>
 			</Container>
 		)
 	}

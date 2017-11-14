@@ -30,8 +30,8 @@ export default class WalletPage extends React.Component<any, IState> {
 		const { form } = this.state
 		const balance = numeral(Store.get(['token:balance', form.address]) || 0).format('0a')
 		return (
-			<Container fill vertical justify-center align-center>
-				<Container wrap pad-8 align-center justify-center>
+			<Container vertical justify-center align-center mgn-t8 pad-t8>
+				<Container wrap pad-v8 mgn-v8 align-center justify-center>
 					<Container vertical grow pad-4 style={{maxWidth: '50rem'}}>
 						<Text uppercase size-6 weight-6 mgn-b2>All Set!</Text>
 						<Text size-4 line-6>Register for the ICO today blah blah blah</Text>

@@ -7,8 +7,10 @@ defmodule Stars.Command.Auth do
 				"name" => name,
 				"email" => email,
 				"address" => address,
+				"ethereum" => ethereum,
+				"dob" => dob
 			} <- body,
-			{:ok, key} <- User.create(name, address, email)
+			{:ok, key} <- User.create(name, address, email, ethereum, dob)
 		do
 			{:reply, key, state}
 		else

@@ -15,14 +15,16 @@ defmodule Stars.User do
 		Kora.query_path!(["token:user", token])
 	end
 
-	def create(name, address, email) do
+	def create(name, address, email, ethereum, dob) do
 		key = UUID.ascending()
 		["user:info", key]
 		|> Mutation.merge(%{
 			"name" => name,
 			"key" => key,
 			"address" => address,
-			"email" => email
+			"ethereum" => ethereum,
+			"email" => email,
+			"dob" => dob,
 		})
 		|> Kora.mutation
 		|> case do

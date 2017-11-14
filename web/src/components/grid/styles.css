@@ -1,0 +1,6 @@
+@import '../../variables/sizing.css';
+@import '../../variables/colors.css';
+
+.container.grid {
+	flex-wrap: wrap;
+}
