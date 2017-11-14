@@ -55,6 +55,11 @@ export default class WalletPage extends React.Component<any, IState> {
 								</Form.Block>
 							</Form.Row>
 						</Container>
+						<Container>
+							<Link to='/auth/register'>
+								<Text weight-5 fg-gray cursor>Not Registered?</Text>
+							</Link>
+						</Container>
 					</Container>
 				</Container>
 			</Container>
