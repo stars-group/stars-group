@@ -13,6 +13,7 @@ defmodule Stars.Application do
         Kora.Server.child_spec(),
         if Stars.Config.postgres_hostname !== nil do
           Stars.Config.postgres
+          |> Map.put(:pool_size, 8)
           |> Map.to_list
           |> Kora.Store.Postgres.child_spec
         else
