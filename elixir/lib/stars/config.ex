@@ -19,4 +19,13 @@ defmodule Stars.Config do
 		writes: nil,
 	}
 
+	config :postgres, %{
+		hostname: nil,
+		port: nil,
+		username: nil,
+		password: nil,
+		database: nil,
+		ssl: true,
+	}
+
 end
