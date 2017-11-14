@@ -5,7 +5,7 @@ function socket() {
 		case 'dev':
 			return 'ws://localhost:12000/socket'
 		case 'production':
-			return `ws://${location.hostname}/socket`
+			return `wss://${location.hostname}/socket`
 	}
 }
 
