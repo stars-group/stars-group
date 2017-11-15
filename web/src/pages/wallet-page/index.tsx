@@ -37,7 +37,7 @@ export default class WalletPage extends React.Component<any, IState> {
 						<Text size-4 line-6>Register for the ICO today blah blah blah</Text>
 						<Container border-h border-b mgn-v5 vertical >
 							<Form.Row>
-								<Form.Block border-r >
+								<Form.Block>
 									<Form.Label>Token Sale Address</Form.Label>
 									<Text mgn-t>0xfbf7d044f30CA2Ac589f46d34a766efe31Ef8b27</Text>
 								</Form.Block>
