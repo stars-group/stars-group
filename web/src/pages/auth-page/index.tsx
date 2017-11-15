@@ -41,8 +41,17 @@ export default class AuthPage extends React.Component<any, IState> {
 			<Container vertical justify-center align-center mgn-t8 pad-t8>
 				<Container wrap pad-v8 mgn-v8 align-center justify-center>
 					<Container vertical grow style={{maxWidth: '50rem'}}>
-						<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
-						<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href=''>whitepaper</a></Text>.  Register below to take part in the Token Sale</Text>
+						<Container mgn-b2 align-center>
+							<Container mgn-r6>
+								<a href='http://starsgroup.io'>
+									<img height='90' src='https://storage.googleapis.com/stars-group/rise-ico-logo%20(1).png' />
+								</a>
+							</Container>
+							<Container vertical>
+								<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
+								<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href=''>whitepaper</a></Text>.  Register below to take part in the Token Sale</Text>
+							</Container>
+						</Container>
 						<Container border-h border-b mgn-v5 vertical >
 							{
 								type === 'register' &&
