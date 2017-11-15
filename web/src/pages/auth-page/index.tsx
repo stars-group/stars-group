@@ -49,7 +49,7 @@ export default class AuthPage extends React.Component<any, IState> {
 							</Container>
 							<Container vertical>
 								<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
-								<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href='https://storage.googleapis.com/stars-group/Stars%20Group%20ICO%20Overview.pdf'>summary</a></Text>.  Register below to take part in the Token Sale</Text>
+								<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href='https://storage.googleapis.com/stars-group/Stars%20Group_November.compressed.pdf'>whitepaper</a></Text>.  Register below to take part in the Token Sale</Text>
 							</Container>
 						</Container>
 						<Container border-h border-b mgn-v5 vertical >
