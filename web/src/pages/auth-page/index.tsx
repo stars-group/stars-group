@@ -115,7 +115,7 @@ export default class AuthPage extends React.Component<any, IState> {
 											<Container>
 												<Form.Label>
 													Terms and Conditions -&nbsp;
-													<Form.Label fg-highlight><a target='_blank' href='https://storage.googleapis.com/stars-group/Terms%20of%20Token%20Sale.docx'>View</a></Form.Label>
+													<Form.Label fg-highlight><a target='_blank' href='https://storage.googleapis.com/stars-group/Terms%20of%20Token%20Sale%20(1).pdf'>View</a></Form.Label>
 												</Form.Label>
 											</Container>
 											<Form.Select
