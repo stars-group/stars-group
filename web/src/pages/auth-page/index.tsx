@@ -15,6 +15,7 @@ interface IState {
 		email?: string,
 		address?: any
 		ethereum?: string
+		contribution?: string
 		dob?: number
 		terms?: string
 	}
@@ -41,7 +42,7 @@ export default class AuthPage extends React.Component<any, IState> {
 				<Container wrap pad-v8 mgn-v8 align-center justify-center>
 					<Container vertical grow style={{maxWidth: '50rem'}}>
 						<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
-						<Text size-4 line-6>Register for the ICO today blah blah blah</Text>
+						<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href=''>whitepaper</a></Text>.  Register below to take part in the Token Sale</Text>
 						<Container border-h border-b mgn-v5 vertical >
 							{
 								type === 'register' &&
@@ -66,6 +67,15 @@ export default class AuthPage extends React.Component<any, IState> {
 									</Form.Row>
 									<Form.Row>
 										<Form.Block>
+											<Form.Label>Email</Form.Label>
+											<Form.Input
+												value={auth.email || ''}
+												placeholder='Enter email'
+												onChange={this.editor.handle('email')} />
+										</Form.Block>
+									</Form.Row>
+									<Form.Row>
+										<Form.Block>
 											<Form.Label>Address</Form.Label>
 											<Form.Address
 												value={Dynamic.get(auth, ['address', 'name']) || ''}
@@ -84,22 +94,20 @@ export default class AuthPage extends React.Component<any, IState> {
 									</Form.Row>
 									<Form.Row>
 										<Form.Block>
-											<Form.Label>Email</Form.Label>
+											<Form.Label>Intended Contribution Amount</Form.Label>
 											<Form.Input
-												value={auth.email || ''}
-												placeholder='Enter email'
-												onChange={this.editor.handle('email')} />
+												value={auth.contribution || ''}
+												placeholder='$ USD'
+												onChange={this.editor.handle('contribution')} />
 										</Form.Block>
 									</Form.Row>
 									<Form.Row>
 										<Form.Block>
-											<Form.Label>Terms and Conditions</Form.Label>
-											<Container mgn-b2>
-												<Form.TextArea
-													disabled
-													rows={6}
-													value='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac enim elementum purus molestie cursus sit amet id augue. Fusce quis mauris enim. Ut bibendum ac nulla in ornare. Proin sit amet tellus eget risus rutrum pellentesque non non augue. Duis sit amet risus eu odio vehicula molestie. Etiam vitae ultricies leo, id lacinia justo. Cras ligula mi, sollicitudin nec nulla eget, convallis feugiat leo. Nullam eget congue eros. In hac habitasse platea dictumst. Cras in convallis magna. Duis laoreet vel orci vitae blandit. Nulla tempus venenatis justo et laoreet. Nam mollis ante gravida tellus imperdiet, ut feugiat enim tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ultricies, nunc venenatis finibus placerat, libero massa efficitur est, nec lobortis nibh massa at diam. '
-												/>
+											<Container>
+												<Form.Label>
+													Terms and Conditions -&nbsp;
+													<Form.Label fg-highlight><a target='_blank' href='https://storage.googleapis.com/stars-group/Terms%20of%20Token%20Sale.docx'>View</a></Form.Label>
+												</Form.Label>
 											</Container>
 											<Form.Select
 												value={auth.terms || 'no'}

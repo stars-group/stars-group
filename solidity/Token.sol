@@ -11,6 +11,3 @@ contract Token {
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }
-
-
-0xDE5CA44483C79c804272BE9aa2f8B3f6a4718420
