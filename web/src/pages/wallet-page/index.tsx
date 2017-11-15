@@ -34,12 +34,12 @@ export default class WalletPage extends React.Component<any, IState> {
 				<Container wrap pad-v8 mgn-v8 align-center justify-center>
 					<Container vertical grow pad-4 style={{maxWidth: '50rem'}}>
 						<Text uppercase size-6 weight-6 mgn-b2>All Set!</Text>
-						<Text size-4 line-6>Register for the ICO today blah blah blah</Text>
+						<Text size-4 line-6>Send Ether to the address listen below to purchase your STARS tokens (2294 STARS / ether). Once you've done that you can check your presale balance below.</Text>
 						<Container border-h border-b mgn-v5 vertical >
 							<Form.Row>
 								<Form.Block>
 									<Form.Label>Token Sale Address</Form.Label>
-									<Text mgn-t>0xfbf7d044f30CA2Ac589f46d34a766efe31Ef8b27</Text>
+									<Text mgn-t>0x69dd512af946fe4aac434559d9349ec9f988d898</Text>
 								</Form.Block>
 							</Form.Row>
 							<Form.Row>

@@ -1,5 +1,5 @@
 defmodule Stars.Token do
-	@address "0x7dC0B324cCE44840e0ECda1847Bc39Ac2912DecE"
+	@address "0x69dd512af946fe4aac434559d9349ec9f988d898"
 
 	def balance_of(address) do
 		Exeth.HTTP.eth_call(%{
