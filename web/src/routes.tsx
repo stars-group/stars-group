@@ -7,6 +7,7 @@ import Root from './root'
 import HomePage from './pages/home-page'
 import AuthPage from './pages/auth-page'
 import WalletPage from './pages/wallet-page'
+import WaitlistPage from './pages/waitlist-page'
 
 export default () => {
 	return (
@@ -16,6 +17,7 @@ export default () => {
 					<Redirect exact path='/' to='/auth/register' />
 					<Route exact path='/auth/:type' component={AuthPage} />
 					<Route exact path='/wallet' component={WalletPage} />
+					<Route exact path='/waitlist' component={WaitlistPage} />
 				</Switch>
 			</Root>
 		</BrowserRouter>

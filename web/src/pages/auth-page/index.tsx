@@ -49,7 +49,7 @@ export default class AuthPage extends React.Component<any, IState> {
 							</Container>
 							<Container vertical>
 								<Text uppercase size-6 weight-6 mgn-b2>STARS Platform</Text>
-								<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href='https://storage.googleapis.com/stars-group/Stars%20Group_November.compressed.pdf'>whitepaper</a></Text>.  <Text weight-5> Register below to take part in the Token Sale</Text></Text>
+								<Text size-4 line-6>Revolutionizing the financial infrastructure of professional football - check out our <Text fg-highlight><a href='https://storage.googleapis.com/stars-group/Stars%20Group_November.compressed.pdf'>whitepaper</a></Text>.  <Text weight-5>Apply below to take part in the Pre-Sale</Text></Text>
 							</Container>
 						</Container>
 						<Container border-h border-b mgn-v5 vertical >
@@ -133,7 +133,7 @@ export default class AuthPage extends React.Component<any, IState> {
 							type === 'login' &&
 								<Container justify-end>
 									<Link to='/auth/register'>
-										<Text weight-5 fg-gray cursor>Register</Text>
+										<Text weight-5 fg-gray cursor>Apply</Text>
 									</Link>
 									<Container grow />
 									<Text mgn-l3 weight-5 fg-highlight cursor onClick={this.handle_login} >Login</Text>
@@ -142,11 +142,11 @@ export default class AuthPage extends React.Component<any, IState> {
 						{
 							type === 'register' &&
 								<Container justify-end>
-									<Link to='/wallet'>
+									<Link to='/waitlist'>
 										<Text weight-5 fg-gray cursor >Already Registered?</Text>
 									</Link>
 									<Container grow />
-									<Text mgn-l3 weight-5 fg-highlight cursor onClick={this.handle_register} >Register</Text>
+									<Text mgn-l3 weight-5 fg-highlight cursor onClick={this.handle_register} >Apply</Text>
 								</Container>
 						}
 					</Container>
