@@ -41,7 +41,7 @@ export default class WalletPage extends React.Component<any, IState> {
 							</Container>
 							<Container vertical>
 								<Text uppercase size-6 weight-6 mgn-b2>All Set!</Text>
-								<Text size-4 line-6>Send Ether to the address listen below to purchase your STARS tokens (2294 STARS / ether). Once you've done that you can check your presale balance below.</Text>
+								<Text size-4 line-6>Send Ether to the address listen below to purchase your STARS tokens (3360 STARS / ether). Once you've done that you can check your presale balance below.</Text>
 							</Container>
 						</Container>
 						<Container border-h border-b mgn-v5 vertical >

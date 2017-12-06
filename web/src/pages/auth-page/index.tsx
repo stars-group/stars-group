@@ -142,7 +142,7 @@ export default class AuthPage extends React.Component<any, IState> {
 						{
 							type === 'register' &&
 								<Container justify-end>
-									<Link to='/waitlist'>
+									<Link to='/wallet'>
 										<Text weight-5 fg-gray cursor >Already Registered?</Text>
 									</Link>
 									<Container grow />
